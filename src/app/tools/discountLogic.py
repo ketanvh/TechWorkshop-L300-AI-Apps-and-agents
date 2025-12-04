@@ -8,12 +8,21 @@ from opentelemetry import trace
 from azure.monitor.opentelemetry import configure_azure_monitor
 from azure.ai.agents.telemetry import trace_function
 import time
+<<<<<<< HEAD
 from opentelemetry.instrumentation.openai_v2 import OpenAIInstrumentor
 
 # Enable Azure Monitor tracing
 application_insights_connection_string = os.environ["APPLICATIONINSIGHTS_CONNECTION_STRING"]
 configure_azure_monitor(connection_string=application_insights_connection_string)
 OpenAIInstrumentor().instrument()
+=======
+# from opentelemetry.instrumentation.openai_v2 import OpenAIInstrumentor
+
+# Enable Azure Monitor tracing
+application_insights_connection_string = os.environ["APPLICATIONINSIGHTS_CONNECTION_STRING"]
+# configure_azure_monitor(connection_string=application_insights_connection_string)
+# OpenAIInstrumentor().instrument()
+>>>>>>> b8e4c9cca24669245fde848debdc69cf85102635
 
 # scenario = os.path.basename(__file__)
 # tracer = trace.get_tracer(__name__)
